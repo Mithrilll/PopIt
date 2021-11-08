@@ -10,6 +10,7 @@ public class ScoreCounter : MonoBehaviour
     public Text mScoreText;
     public float mScore;
     public float mClick;
+    public AudioSource mMusic;
 
     void Awake()
     {
@@ -30,5 +31,6 @@ public class ScoreCounter : MonoBehaviour
     {
         mScore += mClick;
         mScoreText.text = mScore.ToString() + " $";
+        mMusic.Play();
     }
 }
